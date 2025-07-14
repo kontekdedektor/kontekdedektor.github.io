@@ -1,18 +1,18 @@
 backend:
   name: github
-  repo: kontekdedektor/kontekdedektor.github.io # Repo adresiniz doğru
-  branch: main # Branch adınız doğru
+  repo: kontekdedektor/kontekdedektor.github.io
+  branch: main
   auth_type: pkce
-  app_id: Ov23lisst4nqCGfnfnp5 # Client ID'niz doğru
+  app_id: Ov23lisst4nqCGfnfnp5
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "blog" # Yeni bir koleksiyon adı
-    label: "Yazılar" # Panelde görünecek isim
-    folder: "_posts" # Yazıların kaydedileceği yeni klasör
-    create: true # Yeni yazı oluşturmaya izin ver
+  - name: "blog"
+    label: "Yazılar"
+    folder: "_posts"
+    create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Başlık", name: "title", widget: "string"}
