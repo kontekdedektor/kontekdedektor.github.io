@@ -1,30 +1,20 @@
 backend:
   name: github
-  repo: kontekdedektor/kontekdedektor.github.io # Repo adresiniz
-  branch: main # Branch adınız
-  auth_type: pkce # Kimlik doğrulama türü
-  app_id: Ov23lisst4nqCGfnfnp5 # 2. Adımda kopyaladığınız Client ID
+  repo: kontekdedektor/kontekdedektor.github.io # Repo adresiniz doğru
+  branch: main # Branch adınız doğru
+  auth_type: pkce
+  app_id: Ov23lisst4nqCGfnfnp5 # Client ID'niz doğru
 
-media_folder: "images/uploads" # Yüklenen resimlerin kaydedileceği yer
+media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "pages"
-    label: "Sayfa İçerikleri"
-    files:
-      - file: "index.html"
-        label: "Ana Sayfa"
-        name: "anasayfa"
-        fields:
-          - {label: "Ana Başlık", name: "ana_baslik", widget: "string"}
-          - {label: "Ana Açıklama", name: "ana_aciklama", widget: "markdown"}
-  - name: "products"
-    label: "Ürünler"
-    folder: "_products/" # Ürünleri ayrı dosyalarda tutmak için (daha düzenli)
-    create: true
-    slug: "{{slug}}"
+  - name: "blog" # Yeni bir koleksiyon adı
+    label: "Yazılar" # Panelde görünecek isim
+    folder: "_posts" # Yazıların kaydedileceği yeni klasör
+    create: true # Yeni yazı oluşturmaya izin ver
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Ürün Adı", name: "title", widget: "string"}
-      - {label: "Açıklama", name: "description", widget: "text"}
-      - {label: "Görsel", name: "image", widget: "image"}
-      - {label: "Özellikler", name: "features", widget: "list"}
+      - {label: "Başlık", name: "title", widget: "string"}
+      - {label: "Yayın Tarihi", name: "date", widget: "datetime"}
+      - {label: "İçerik", name: "body", widget: "markdown"}
