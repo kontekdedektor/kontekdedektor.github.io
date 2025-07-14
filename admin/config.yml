@@ -1,7 +1,9 @@
 backend:
   name: github
-  repo: kontekdedektor/kontekdedektor.github.io # Kendi GitHub kullanıcıadı/repo adınızı yazın
-  branch: main # Ana branch'inizin adını yazın
+  repo: kontekdedektor/kontekdedektor.github.io # Repo adresiniz
+  branch: main # Branch adınız
+  auth_type: pkce # Kimlik doğrulama türü
+  app_id: Ov23lisst4nqCGfnfnp5 # 2. Adımda kopyaladığınız Client ID
 
 media_folder: "images/uploads" # Yüklenen resimlerin kaydedileceği yer
 public_folder: "/images/uploads"
