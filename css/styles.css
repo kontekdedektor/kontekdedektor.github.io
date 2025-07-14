@@ -1,0 +1,224 @@
+:where([class^="ri-"])::before { content: "\f3c2"; }
+:root {
+  --bg-dark: #0A0F2D;
+  --text-light: #ffffff;
+  --accent-blue: #00F0FF;
+  --accent-gold: #FFD700;
+}
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+h1, h2, h3, h4, h5, h6, .heading {
+  font-family: 'Orbitron', sans-serif;
+}
+.hero-section {
+  background-image: linear-gradient(to right, rgba(10, 15, 45, 0.9) 40%, rgba(10, 15, 45, 0.7) 70%, rgba(10, 15, 45, 0.5) 100%), url('https://readdy.ai/api/search-image?query=advanced%2520technology%2520underground%2520detection%2520device%2520with%2520futuristic%2520interface%2520in%2520a%2520dark%2520environment%2520with%2520blue%2520glowing%2520elements%2520and%2520holographic%2520displays%2520showing%2520underground%2520structures%2520and%2520anomalies%2520high%2520quality%2520realistic%2520render&width=1600&height=900&seq=hero1&orientation=landscape');
+  background-size: cover;
+  background-position: center right;
+}
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent-blue);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+.nav-link:hover {
+  color: var(--accent-blue);
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-blue), #0080FF);
+  border: none;
+  color: var(--text-light);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+}
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--accent-blue);
+  color: var(--accent-blue);
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+  background-color: rgba(0, 240, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+.card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 240, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 240, 255, 0.1);
+  border-color: rgba(0, 240, 255, 0.3);
+}
+.glow-effect {
+  position: relative;
+}
+.glow-effect::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--accent-blue), transparent, var(--accent-blue));
+  z-index: -1;
+  border-radius: inherit;
+  animation: glowing 3s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.glow-effect:hover::before {
+  opacity: 1;
+}
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-blue), transparent);
+}
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent-blue);
+  box-shadow: 0 0 10px var(--accent-blue);
+}
+input, textarea, select {
+  background-color: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(0, 240, 255, 0.5);
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px rgba(0, 240, 255, 0.2);
+  outline: none;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+@media (max-width: 767px) {
+  .hero-section {
+    padding-top: 100px;
+  }
+  .video-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+#product-modal {
+  transition: opacity 0.3s ease;
+}
+#product-modal .bg-[#0c1235] {
+  box-shadow: 0 10px 25px rgba(0, 240, 255, 0.2);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+#close-product-modal {
+  transition: all 0.3s ease;
+  background: rgba(0, 240, 255, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+}
+#close-product-modal:hover {
+  background: rgba(0, 240, 255, 0.2);
+  transform: rotate(90deg);
+}
+/* Gemini Alan Analizi Stilleri */
+#gemini-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-left-color: var(--accent-blue);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+#gemini-response-card h4 {
+    color: var(--accent-blue);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+}
+#gemini-response-card p {
+    margin-bottom: 1rem;
+}
+#gemini-response-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+#gemini-response-card li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 0.5rem;
+}
+#gemini-response-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+    font-weight: bold;
+}
