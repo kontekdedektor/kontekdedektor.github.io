@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: kontekdedektor/kontekdedektor.github.io
+  branch: main
+  auth_type: pkce
+  app_id: Ov23lisst4nqCGfnfnp5
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Yazılar"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Başlık", name: "title", widget: "string"}
+      - {label: "Yayın Tarihi", name: "date", widget: "datetime"}
+      - {label: "İçerik", name: "body", widget: "markdown"}
