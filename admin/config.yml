@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: kontekdedektor/kontekdedektor.github.io # Kendi GitHub kullanıcıadı/repo adınızı yazın
+  branch: main # Ana branch'inizin adını yazın
+
+media_folder: "images/uploads" # Yüklenen resimlerin kaydedileceği yer
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Sayfa İçerikleri"
+    files:
+      - file: "index.html"
+        label: "Ana Sayfa"
+        name: "anasayfa"
+        fields:
+          - {label: "Ana Başlık", name: "ana_baslik", widget: "string"}
+          - {label: "Ana Açıklama", name: "ana_aciklama", widget: "markdown"}
+  - name: "products"
+    label: "Ürünler"
+    folder: "_products/" # Ürünleri ayrı dosyalarda tutmak için (daha düzenli)
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Ürün Adı", name: "title", widget: "string"}
+      - {label: "Açıklama", name: "description", widget: "text"}
+      - {label: "Görsel", name: "image", widget: "image"}
+      - {label: "Özellikler", name: "features", widget: "list"}
