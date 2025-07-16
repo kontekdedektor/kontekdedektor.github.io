@@ -1,0 +1,26 @@
+# /admin/config.yml - YENİ VE BASİT HALİ
+
+backend:
+  name: git-gateway
+  branch: main # veya projenizin ana branch'i ne ise o
+
+# Yüklenen resimler için ayarlar (bunlar aynı kalıyor)
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # "Ürünler" için yeni yapılandırma
+  - name: "urunler_sayfasi" # Koleksiyonun kimliği
+    label: "Ürünler" # Admin panelinde görünecek etiket
+    files: # "folder" yerine "files" kullanıyoruz
+      - name: "urunler" # Bu ayar grubunun kimliği
+        label: "Tüm Ürünler" # Panelde görünecek başlık
+        file: "_data/urunler.json" # TÜM ürünlerin kaydedileceği TEK dosya
+        fields:
+          - name: "urun_listesi" # Alanın kimliği
+            label: "Ürün Listesi" # Panelde görünecek etiket
+            widget: "list" # Bu bir liste olacak
+            fields: # Listenin içindeki her bir ürünün alanları
+              - {label: "Başlık", name: "title", widget: "string"}
+              - {label: "Açıklama", name: "description", widget: "markdown"}
+              - {label: "Resim", name: "thumbnail", widget: "image"}
