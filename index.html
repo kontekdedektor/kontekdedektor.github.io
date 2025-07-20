@@ -476,6 +476,19 @@
         color: var(--accent-blue);
         font-weight: bold;
     }
+    
+     /* === SEÇİLİ GÖRSEL İÇİN YENİ STİLLER === */
+    .thumbnail {
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        border: 2px solid transparent; /* Varsayılan olarak şeffaf çerçeve */
+        opacity: 0.6; /* Seçili olmayanlar soluk olsun */
+    }
+    .thumbnail.selected {
+        border-color: var(--accent-blue); /* Seçili olanın çerçevesi mavi olsun */
+        opacity: 1 !important; /* Seçili olan tam opak olsun */
+        transform: scale(1.05);
+    }
 </style>
 
 </head>
@@ -741,6 +754,7 @@
 </section>
 
 <!-- Products Section -->
+
 <section id="products" class="py-20 bg-[#0c1235]">
   <div class="container mx-auto px-6 md:px-12">
     <div class="text-center mb-16">
@@ -750,12 +764,14 @@
       </p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
       <!-- Product 1 -->
+
       <div class="product-card">
         <div class="product-card-inner">
           <div class="card p-6 rounded-lg h-full flex flex-col">
             <div class="relative mb-6 overflow-hidden rounded-lg">
-              <img src="https://readdy.ai/api/search-image?query=advanced%2520handheld%2520underground%2520metal%2520detector%2520with%2520digital%2520display%2520and%2520futuristic%2520blue%2520glowing%2520elements%2520on%2520black%2520background%2520professional%2520product%2520photography%2520high%2520resolution&width=600&height=400&seq=product1&orientation=landscape" alt="KTD-100 Gradiyometre" class="w-full h-64 object-cover object-top">
+              <img src="images/urun-ktd-100.jpg" alt="KTD-100 Gradiyometre" class="w-full h-64 object-cover object-top">
               <div class="absolute top-3 right-3 bg-primary text-white text-xs py-1 px-3 rounded-full" style="font-weight: bold; color: black;" data-tr="Temel Model" data-en="Basic Model">Temel Model</div>
             </div>
             <h3 class="text-2xl font-bold mb-3">KTD-100 Gradiyometre</h3>
@@ -790,11 +806,12 @@
       </div>
 
       <!-- Product 2 -->
+
       <div class="product-card">
         <div class="product-card-inner">
           <div class="card p-6 rounded-lg h-full flex flex-col glow-effect">
             <div class="relative mb-6 overflow-hidden rounded-lg">
-              <img src="https://readdy.ai/api/search-image?query=professional%2520underground%2520detection%2520device%2520with%2520digital%2520display%2520and%2520wireless%2520connectivity%2520futuristic%2520design%2520with%2520blue%2520glowing%2520elements%2520on%2520black%2520background%2520professional%2520product%2520photography%2520high%2520resolution&width=600&height=400&seq=product2&orientation=landscape" alt="KTD-200 Pro Gradiyometre" class="w-full h-64 object-cover object-top">
+              <img src="images/urun-ktd-200.jpg" alt="KTD-200 Pro Gradiyometre" class="w-full h-64 object-cover object-top">
               <div class="absolute top-3 right-3 bg-secondary text-[#0A0F2D] text-xs font-bold py-1 px-3 rounded-full" style="color: black; font-weight: bold;" data-tr="En Çok Satan" data-en="Best Seller">En Çok Satan</div>
             </div>
             <h3 class="text-2xl font-bold mb-3">KTD-200 Pro Gradiyometre</h3>
@@ -837,7 +854,7 @@
         <div class="product-card-inner">
           <div class="card p-6 rounded-lg h-full flex flex-col">
             <div class="relative mb-6 overflow-hidden rounded-lg">
-              <img src="https://readdy.ai/api/search-image?query=premium%2520high-tech%2520underground%2520detection%2520system%2520with%2520AI%2520capabilities%2520and%25203D%2520imaging%2520technology%2520futuristic%2520design%2520with%2520blue%2520glowing%2520elements%2520on%2520black%2520background%2520professional%2520product%2520photography%2520high%2520resolution&width=600&height=400&seq=product3&orientation=landscape" alt="KTD-300 Ultra Gradiyometre" class="w-full h-64 object-cover object-top">
+              <img src="images/urun-ktd-300.jpg" alt="KTD-300 Ultra Gradiyometre" class="w-full h-64 object-cover object-top">
               <div class="absolute top-3 right-3 bg-primary text-white text-xs py-1 px-3 rounded-full" style="color: black; font-weight: bold;" data-tr="Premium Model" data-en="Premium Model">Premium Model</div>
             </div>
             <h3 class="text-2xl font-bold mb-3">KTD-300 Ultra Gradiyometre</h3>
@@ -902,9 +919,9 @@
             <img id="modal-main-image" src="" alt="" class="w-full h-64 lg:h-80 object-cover">
           </div>
           <div class="grid grid-cols-3 gap-3">
-            <img src="https://readdy.ai/api/search-image?query=advanced%2520handheld%2520underground%2520metal%2520detector%2520with%2520digital%2520display%2520and%2520futuristic%2520blue%2520glowing%2520elements%2520on%2520black%2520background%2520professional%2520product%2520photography%2520high%2520resolution&width=600&height=400&seq=product1&orientation=landscape" alt="Ürün Görseli 1" class="h-24 object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity">
-            <img src="https://readdy.ai/api/search-image?query=professional%2520underground%2520detection%2520device%2520with%2520digital%2520display%2520and%2520wireless%2520connectivity%2520futuristic%2520design%2520with%2520blue%2520glowing%2520elements%2520on%2520black%2520background%2520professional%2520product%2520photography%2520high%2520resolution&width=600&height=400&seq=product2&orientation=landscape" alt="Ürün Görseli 2" class="h-24 object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity">
-            <img src="https://readdy.ai/api/search-image?query=premium%2520high-tech%2520underground%2520detection%2520system%2520with%2520AI%2520capabilities%2520and%25203D%2520imaging%2520technology%2520futuristic%2520design%2520with%2520blue%2520glowing%2520elements%2520on%2520black%2520background%2520professional%2520product%2520photography%2520high%2520resolution&width=600&height=400&seq=product3&orientation=landscape" alt="Ürün Görseli 3" class="h-24 object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity">
+            <img src="images/urun-ktd-100.jpg" alt="Ürün Görseli 1" class="thumbnail h-24 object-cover rounded-lg transition-opacity">
+            <img src="images/urun-ktd-200.jpg" alt="Ürün Görseli 2" class="thumbnail h-24 object-cover rounded-lg transition-opacity">
+           <img src="images/urun-ktd-300.jpg" alt="Ürün Görseli 3" class="thumbnail h-24 object-cover rounded-lg transition-opacity">
           </div>
         </div>
         
@@ -1007,7 +1024,7 @@
       <div class="relative">
         <div class="absolute -top-10 -left-10 w-40 h-40 bg-primary bg-opacity-10 rounded-full filter blur-3xl"></div>
         <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary bg-opacity-10 rounded-full filter blur-3xl"></div>
-        <img src="https://readdy.ai/api/search-image?query=cutaway%2520view%2520of%2520advanced%2520underground%2520detection%2520technology%2520showing%2520internal%2520components%2520and%2520sensors%2520with%2520blue%2520glowing%2520elements%2520and%2520magnetic%2520field%2520visualization%2520technical%2520illustration%2520on%2520dark%2520background%2520high%2520quality%2520detailed&width=600&height=600&seq=tech1&orientation=squarish" alt="Gradiyometre Teknolojisi" class="rounded-lg shadow-2xl relative z-10">
+        <img src="images/gradiyometre-teknolojisi.jpg" alt="Gradiyometre Teknolojisi" class="rounded-lg shadow-2xl relative z-10">
       </div>
     </div>
     <div class="bg-[#0c1235] p-8 rounded-lg">
@@ -1073,7 +1090,7 @@
       <!-- Application 1 -->
       <div class="card p-6 rounded-lg overflow-hidden">
         <div class="relative h-48 mb-6 overflow-hidden rounded-lg">
-          <img src="https://readdy.ai/api/search-image?query=treasure%2520hunters%2520using%2520advanced%2520metal%2520detectors%2520in%2520a%2520forest%2520or%2520mountainous%2520area%2520with%2520digital%2520displays%2520showing%2520underground%2520findings%2520realistic%2520photo%2520high%2520quality&width=600&height=400&seq=app1&orientation=landscape" alt="Hazine Avcılığı" class="w-full h-full object-cover object-top">
+          <img src="images/uygulama-hazine.jpg" alt="Hazine Avcılığı" class="w-full h-full object-cover object-top">
         </div>
         <h3 class="text-xl font-bold mb-3" data-tr="Hazine Avcılığı" data-en="Treasure Hunting">Hazine Avcılığı</h3>
         <p class="text-gray-400 mb-6" data-tr="Profesyonel hazine avcıları, KTD gradiyometreleri ile daha derine inebilir ve daha hassas sonuçlar elde edebilir. Cihazlarımız, farklı metal türlerini ayırt ederek değerli metalleri tespit etmenize yardımcı olur." data-en="Professional treasure hunters can go deeper and get more precise results with KTD gradiometers. Our devices help detect precious metals by distinguishing between different metal types.">
@@ -1097,7 +1114,7 @@
       <!-- Application 2 -->
       <div class="card p-6 rounded-lg overflow-hidden">
         <div class="relative h-48 mb-6 overflow-hidden rounded-lg">
-          <img src="https://readdy.ai/api/search-image?query=archaeologists%2520using%2520high-tech%2520equipment%2520at%2520an%2520excavation%2520site%2520with%2520digital%2520displays%2520showing%2520underground%2520structures%2520and%2520artifacts%2520realistic%2520photo%2520high%2520quality&width=600&height=400&seq=app2&orientation=landscape" alt="Arkeoloji" class="w-full h-full object-cover object-top">
+          <img src="images/uygulama-arkeoloji.jpg" alt="Arkeoloji" class="w-full h-full object-cover object-top">
         </div>
         <h3 class="text-xl font-bold mb-3" data-tr="Arkeoloji" data-en="Archaeology">Arkeoloji</h3>
         <p class="text-gray-400 mb-6" data-tr="Arkeologlar, KTD teknolojisi ile kazı yapmadan önce alanı tarayarak, yeraltındaki yapıları ve artifaktları tespit edebilir. Bu, zaman ve kaynak tasarrufu sağlarken, tarihi eserlere zarar verme riskini azaltır." data-en="Archaeologists can scan an area with KTD technology before excavation to detect underground structures and artifacts. This saves time and resources while reducing the risk of damage to historical artifacts.">
@@ -1121,7 +1138,7 @@
       <!-- Application 3 -->
       <div class="card p-6 rounded-lg overflow-hidden">
         <div class="relative h-48 mb-6 overflow-hidden rounded-lg">
-          <img src="https://readdy.ai/api/search-image?query=geologists%2520or%2520engineers%2520using%2520advanced%2520detection%2520equipment%2520in%2520a%2520mining%2520or%2520construction%2520site%2520with%25203D%2520visualization%2520of%2520underground%2520structures%2520realistic%2520photo%2520high%2520quality&width=600&height=400&seq=app3&orientation=landscape" alt="Jeoloji ve Madencilik" class="w-full h-full object-cover object-top">
+          <img src="images/uygulama-jeoloji-madencilik.jpg" alt="Jeoloji ve Madencilik" class="w-full h-full object-cover object-top">
         </div>
         <h3 class="text-xl font-bold mb-3" data-tr="Jeoloji ve Madencilik" data-en="Geology and Mining">Jeoloji ve Madencilik</h3>
         <p class="text-gray-400 mb-6" data-tr="Jeologlar ve madencilik profesyonelleri, KTD gradiyometreleri ile maden yataklarını tespit edebilir ve yeraltı yapılarını haritalayabilir. 3D görüntüleme teknolojimiz, detaylı yeraltı haritaları oluşturmanıza olanak tanır." data-en="Geologists and mining professionals can detect mineral deposits and map underground structures with KTD gradiometers. Our 3D imaging technology allows you to create detailed underground maps.">
@@ -1145,7 +1162,7 @@
       <!-- Application 4 -->
       <div class="card p-6 rounded-lg overflow-hidden">
         <div class="relative h-48 mb-6 overflow-hidden rounded-lg">
-          <img src="https://readdy.ai/api/search-image?query=construction%2520engineers%2520using%2520high-tech%2520equipment%2520to%2520scan%2520for%2520underground%2520utilities%2520and%2520structures%2520at%2520a%2520construction%2520site%2520with%2520digital%2520displays%2520showing%2520underground%2520pipes%2520and%2520cables%2520realistic%2520photo%2520high%2520quality&width=600&height=400&seq=app4&orientation=landscape" alt="İnşaat ve Altyapı" class="w-full h-full object-cover object-top">
+          <img src="images/uygulama-insaat-altyapi.jpg" alt="İnşaat ve Altyapı" class="w-full h-full object-cover object-top">
         </div>
         <h3 class="text-xl font-bold mb-3" data-tr="İnşaat ve Altyapı" data-en="Construction and Infrastructure">İnşaat ve Altyapı</h3>
         <p class="text-gray-400 mb-6" data-tr="İnşaat mühendisleri, KTD teknolojisi ile yeraltı altyapısını (borular, kablolar, vb.) tespit ederek, kazı sırasında oluşabilecek hasarları önleyebilir. Ayrıca, zemin yapısını analiz ederek daha güvenli yapılar inşa edilmesine katkıda bulunur." data-en="Construction engineers can detect underground infrastructure (pipes, cables, etc.) with KTD technology, preventing potential damage during excavation. It also contributes to building safer structures by analyzing ground conditions.">
@@ -1169,7 +1186,7 @@
       <!-- Application 5 -->
       <div class="card p-6 rounded-lg overflow-hidden">
         <div class="relative h-48 mb-6 overflow-hidden rounded-lg">
-          <img src="https://readdy.ai/api/search-image?query=military%2520or%2520security%2520personnel%2520using%2520advanced%2520detection%2520equipment%2520to%2520locate%2520buried%2520explosives%2520or%2520weapons%2520with%2520digital%2520displays%2520showing%2520underground%2520objects%2520realistic%2520photo%2520high%2520quality&width=600&height=400&seq=app5&orientation=landscape" alt="Güvenlik ve Savunma" class="w-full h-full object-cover object-top">
+          <img src="images/uygulama-guvenlik-savunma.jpg" alt="Güvenlik ve Savunma" class="w-full h-full object-cover object-top">
         </div>
         <h3 class="text-xl font-bold mb-3" data-tr="Güvenlik ve Savunma" data-en="Security and Defense">Güvenlik ve Savunma</h3>
         <p class="text-gray-400 mb-6" data-tr="Güvenlik güçleri ve savunma birimleri, KTD gradiyometreleri ile gömülü patlayıcıları, silahları ve diğer tehlikeli nesneleri tespit edebilir. Yüksek hassasiyetli cihazlarımız, hayat kurtarıcı uygulamalarda kritik rol oynar." data-en="Security forces and defense units can detect buried explosives, weapons and other dangerous objects with KTD gradiometers. Our high-precision devices play a critical role in life-saving applications.">
@@ -1193,7 +1210,7 @@
       <!-- Application 6 -->
       <div class="card p-6 rounded-lg overflow-hidden">
         <div class="relative h-48 mb-6 overflow-hidden rounded-lg">
-          <img src="https://readdy.ai/api/search-image?query=environmental%2520scientists%2520using%2520advanced%2520detection%2520equipment%2520in%2520a%2520natural%2520setting%2520to%2520monitor%2520soil%2520conditions%2520or%2520locate%2520underground%2520contamination%2520with%2520digital%2520displays%2520showing%2520data%2520realistic%2520photo%2520high%2520quality&width=600&height=400&seq=app6&orientation=landscape" alt="Çevre Araştırmaları" class="w-full h-full object-cover object-top">
+          <img src="images/uygulama-cevre-arastırma.jpg" alt="Çevre Araştırmaları" class="w-full h-full object-cover object-top">
         </div>
         <h3 class="text-xl font-bold mb-3" data-tr="Çevre Araştırmaları" data-en="Environmental Research">Çevre Araştırmaları</h3>
         <p class="text-gray-400 mb-6" data-tr="Çevre bilimcileri, KTD teknolojisi ile toprak kirliliğini, gömülü atıkları ve yeraltı suyunun akış yönünü tespit edebilir. Bu, çevresel etki değerlendirmelerinde ve rehabilitasyon projelerinde değerli veriler sağlar." data-en="Environmental scientists can detect soil pollution, buried waste and underground water flow direction with KTD technology. This provides valuable data for environmental impact assessments and rehabilitation projects.">
@@ -1608,141 +1625,64 @@
 </div>
 
 <script>
+  
   // Product detail modal script
   document.addEventListener('DOMContentLoaded', function() {
     const productButtons = document.querySelectorAll('.product-detail-btn');
     const productModal = document.getElementById('product-modal');
     const closeModalButton = document.getElementById('close-product-modal');
     
-    // NOT: Ürün bilgileri aşağıdaki JavaScript nesnesinde hard-coded olarak tutulmaktadır.
-    // Büyük projelerde bu verilerin bir CMS veya API üzerinden dinamik olarak çekilmesi önerilir.
+    // Ürün Bilgileri... (Bu kısım aynı kalıyor)
     const products = {
-  'ktd-100': {
-    title: 'KTD-100 Gradiyometre',
-    badge: 'Temel Model',
-    badgeEn: 'Basic Model',
-    badgeColor: 'bg-primary text-white',
-    description: 'Profesyonel kullanıcılar için tasarlanmış temel model gradiyometremiz. 5 metre derinliğe kadar hassas algılama.',
-    descriptionEn: 'Our basic model gradiometer designed for professional users. Precise detection up to 5 meters depth.',
-    features: [
-      '5 metre algılama derinliği',
-      'LCD ekran',
-      '8 saat pil ömrü',
-      'Temel metal ayırt etme',
-      'Hafif ve ergonomik tasarım',
-      'Su geçirmez gövde'
-    ],
-    featuresEn: [
-      '5 meter detection depth',
-      'LCD display',
-      '8 hour battery life',
-      'Basic metal discrimination',
-      'Lightweight and ergonomic design',
-      'Waterproof body'
-    ],
-    techSpecs: [
-      { name: 'Ağırlık', nameEn: 'Weight', value: '1.2 kg' },
-      { name: 'Boyutlar', nameEn: 'Dimensions', value: '45x25x15 cm' },
-      { name: 'Çalışma Sıcaklığı', nameEn: 'Operating Temperature', value: '-10°C ile 50°C' },
-      { name: 'Garanti', nameEn: 'Warranty', value: '2 Yıl' },
-      { name: 'Sensör Tipi', nameEn: 'Sensor Type', value: 'Çift Sensör' },
-      { name: 'Kablosuz Bağlantı', nameEn: 'Wireless Connection', value: 'Yok' }
-    ],
-    price: '₺7,999',
-    oldPrice: '₺9,999',
-    discount: '%20 İndirim',
-    discountEn: '%20 Discount',
-    buyLink: 'https://www.ornek-satis-sitesi.com/ktd-100-satin-al' // <-- BURAYA LİNK EKLEYİN
-  },
-  'ktd-200': {
-    title: 'KTD-200 Pro Gradiyometre',
-    badge: 'En Çok Satan',
-    badgeEn: 'Best Seller',
-    badgeColor: 'bg-secondary text-[#0A0F2D]',
-    description: 'Orta ve ileri seviye kullanıcılar için kablosuz bağlantı özellikli profesyonel gradiyometre.',
-    descriptionEn: 'Professional gradiometer with wireless connectivity for intermediate and advanced users.',
-    features: [
-      '8 metre algılama derinliği',
-      'Renkli dokunmatik ekran',
-      'Kablosuz bağlantı',
-      '10 saat pil ömrü',
-      'Gelişmiş metal ayırt etme',
-      '3D tarama özelliği'
-    ],
-    featuresEn: [
-      '8 meter detection depth',
-      'Color touch screen',
-      'Wireless connection',
-      '10 hour battery life',
-      'Advanced metal discrimination',
-      '3D scanning feature'
-    ],
-    techSpecs: [
-      { name: 'Ağırlık', nameEn: 'Weight', value: '1.5 kg' },
-      { name: 'Boyutlar', nameEn: 'Dimensions', value: '50x30x20 cm' },
-      { name: 'Çalışma Sıcaklığı', nameEn: 'Operating Temperature', value: '-15°C ile 55°C' },
-      { name: 'Garanti', nameEn: 'Warranty', value: '3 Yıl' },
-      { name: 'Sensör Tipi', nameEn: 'Sensor Type', value: 'Dörtlü Sensör' },
-      { name: 'Kablosuz Bağlantı', nameEn: 'Wireless Connection', value: 'Wi-Fi ve Bluetooth' }
-    ],
-    price: '₺12,499',
-    oldPrice: '₺15,999',
-    discount: '%22 İndirim',
-    discountEn: '%22 Discount',
-    buyLink: 'https://www.ornek-satis-sitesi.com/ktd-200-pro-satin-al' // <-- BURAYA LİNK EKLEYİN
-  },
-  'ktd-300': {
-    title: 'KTD-300 Ultra Gradiyometre',
-    badge: 'Premium Model',
-    badgeEn: 'Premium Model',
-    badgeColor: 'bg-primary text-white',
-    description: 'Profesyonel arama ekipleri için yapay zeka destekli, en yüksek hassasiyete sahip premium gradiyometre.',
-    descriptionEn: 'AI-supported premium gradiometer with the highest precision for professional search teams.',
-    features: [
-      '10+ metre algılama derinliği',
-      'Yüksek çözünürlüklü dokunmatik ekran',
-      'Yapay zeka destekli analiz',
-      '3D görüntüleme teknolojisi',
-      '12 saat pil ömrü',
-      'GPS entegrasyonu'
-    ],
-    featuresEn: [
-      '10+ meter detection depth',
-      'High resolution touch screen',
-      'AI-supported analysis',
-      '3D imaging technology',
-      '12 hour battery life',
-      'GPS integration'
-    ],
-    techSpecs: [
-      { name: 'Ağırlık', nameEn: 'Weight', value: '1.8 kg' },
-      { name: 'Boyutlar', nameEn: 'Dimensions', value: '55x35x25 cm' },
-      { name: 'Çalışma Sıcaklığı', nameEn: 'Operating Temperature', value: '-20°C ile 60°C' },
-      { name: 'Garanti', nameEn: 'Warranty', value: '5 Yıl' },
-      { name: 'Sensör Tipi', nameEn: 'Sensor Type', value: 'Altılı Sensör Dizisi' },
-      { name: 'Kablosuz Bağlantı', nameEn: 'Wireless Connection', value: 'Wi-Fi, Bluetooth ve 4G' }
-    ],
-    price: '₺19,999',
-    oldPrice: '₺24,999',
-    discount: '%20 İndirim',
-    discountEn: '%20 Discount',
-    buyLink: 'https://www.google.com/ktd-300-ultra-satin-al' // <-- BURAYA LİNK EKLEYİN
-  }
-};
+      'ktd-100': {
+        title: 'KTD-100 Gradiyometre',
+        badge: 'Temel Model', badgeEn: 'Basic Model', badgeColor: 'bg-primary text-white',
+        description: 'Profesyonel kullanıcılar için tasarlanmış temel model gradiyometremiz. 5 metre derinliğe kadar hassas algılama.',
+        descriptionEn: 'Our basic model gradiometer designed for professional users. Precise detection up to 5 meters depth.',
+        features: ['5 metre algılama derinliği', 'LCD ekran', '8 saat pil ömrü', 'Temel metal ayırt etme', 'Hafif ve ergonomik tasarım', 'Su geçirmez gövde'],
+        featuresEn: ['5 meter detection depth', 'LCD display', '8 hour battery life', 'Basic metal discrimination', 'Lightweight and ergonomic design', 'Waterproof body'],
+        techSpecs: [{ name: 'Ağırlık', nameEn: 'Weight', value: '1.2 kg' }, { name: 'Boyutlar', nameEn: 'Dimensions', value: '45x25x15 cm' }, { name: 'Çalışma Sıcaklığı', nameEn: 'Operating Temperature', value: '-10°C ile 50°C' }, { name: 'Garanti', nameEn: 'Warranty', value: '2 Yıl' }, { name: 'Sensör Tipi', nameEn: 'Sensor Type', value: 'Çift Sensör' }, { name: 'Kablosuz Bağlantı', nameEn: 'Wireless Connection', value: 'Yok' }],
+        price: '₺7,999', oldPrice: '₺9,999', discount: '%20 İndirim', discountEn: '%20 Discount',
+        buyLink: 'https://www.ornek-satis-sitesi.com/ktd-100-satin-al'
+      },
+      'ktd-200': {
+        title: 'KTD-200 Pro Gradiyometre',
+        badge: 'En Çok Satan', badgeEn: 'Best Seller', badgeColor: 'bg-secondary text-[#0A0F2D]',
+        description: 'Orta ve ileri seviye kullanıcılar için kablosuz bağlantı özellikli profesyonel gradiyometre.',
+        descriptionEn: 'Professional gradiometer with wireless connectivity for intermediate and advanced users.',
+        features: ['8 metre algılama derinliği', 'Renkli dokunmatik ekran', 'Kablosuz bağlantı', '10 saat pil ömrü', 'Gelişmiş metal ayırt etme', '3D tarama özelliği'],
+        featuresEn: ['8 meter detection depth', 'Color touch screen', 'Wireless connection', '10 hour battery life', 'Advanced metal discrimination', '3D scanning feature'],
+        techSpecs: [{ name: 'Ağırlık', nameEn: 'Weight', value: '1.5 kg' }, { name: 'Boyutlar', nameEn: 'Dimensions', value: '50x30x20 cm' }, { name: 'Çalışma Sıcaklığı', nameEn: 'Operating Temperature', value: '-15°C ile 55°C' }, { name: 'Garanti', nameEn: 'Warranty', value: '3 Yıl' }, { name: 'Sensör Tipi', nameEn: 'Sensor Type', value: 'Dörtlü Sensör' }, { name: 'Kablosuz Bağlantı', nameEn: 'Wireless Connection', value: 'Wi-Fi ve Bluetooth' }],
+        price: '₺12,499', oldPrice: '₺15,999', discount: '%22 İndirim', discountEn: '%22 Discount',
+        buyLink: 'https://www.ornek-satis-sitesi.com/ktd-200-pro-satin-al'
+      },
+      'ktd-300': {
+        title: 'KTD-300 Ultra Gradiyometre',
+        badge: 'Premium Model', badgeEn: 'Premium Model', badgeColor: 'bg-primary text-white',
+        description: 'Profesyonel arama ekipleri için yapay zeka destekli, en yüksek hassasiyete sahip premium gradiyometre.',
+        descriptionEn: 'AI-supported premium gradiometer with the highest precision for professional search teams.',
+        features: ['10+ metre algılama derinliği', 'Yüksek çözünürlüklü dokunmatik ekran', 'Yapay zeka destekli analiz', '3D görüntüleme teknolojisi', '12 saat pil ömrü', 'GPS entegrasyonu'],
+        featuresEn: ['10+ meter detection depth', 'High resolution touch screen', 'AI-supported analysis', '3D imaging technology', '12 hour battery life', 'GPS integration'],
+        techSpecs: [{ name: 'Ağırlık', nameEn: 'Weight', value: '1.8 kg' }, { name: 'Boyutlar', nameEn: 'Dimensions', value: '55x35x25 cm' }, { name: 'Çalışma Sıcaklığı', nameEn: 'Operating Temperature', value: '-20°C ile 60°C' }, { name: 'Garanti', nameEn: 'Warranty', value: '5 Yıl' }, { name: 'Sensör Tipi', nameEn: 'Sensor Type', value: 'Altılı Sensör Dizisi' }, { name: 'Kablosuz Bağlantı', nameEn: 'Wireless Connection', value: 'Wi-Fi, Bluetooth ve 4G' }],
+        price: '₺19,999', oldPrice: '₺24,999', discount: '%20 İndirim', discountEn: '%20 Discount',
+        buyLink: 'https://www.google.com/ktd-300-ultra-satin-al'
+      }
+    };
     
-    // Modal opening function
+    const thumbnails = document.querySelectorAll('#product-modal .thumbnail');
+    const mainImage = document.getElementById('modal-main-image');
+
+    // Modal açma fonksiyonu
     function openProductModal(productId) {
       const product = products[productId];
       const currentLang = localStorage.getItem('language') || 'tr';
       
-      // Fill modal content
+      // Modal içeriğini doldur...
       document.getElementById('modal-product-title').textContent = product.title;
       document.getElementById('modal-product-description').textContent = currentLang === 'tr' ? product.description : product.descriptionEn;
-      
       const badge = document.getElementById('modal-product-badge');
       badge.textContent = currentLang === 'tr' ? product.badge : product.badgeEn;
       badge.className = `inline-block text-xs font-bold py-1 px-3 rounded-full mb-4 ${product.badgeColor}`;
-      
       const featuresContainer = document.getElementById('modal-product-features');
       featuresContainer.innerHTML = '';
       const features = currentLang === 'tr' ? product.features : product.featuresEn;
@@ -1752,13 +1692,10 @@
         featureElement.innerHTML = `<i class="ri-check-line text-primary mr-2"></i><span>${feature}</span>`;
         featuresContainer.appendChild(featureElement);
       });
-      
-      // Update price info
       document.getElementById('modal-product-price').textContent = product.price;
       document.getElementById('modal-product-oldprice').textContent = product.oldPrice;
       document.getElementById('modal-product-discount').textContent = currentLang === 'tr' ? product.discount : product.discountEn;
       document.getElementById('modal-buy-button').href = product.buyLink;
-      
       const techSpecsContainer = document.getElementById('modal-tech-specs');
       techSpecsContainer.innerHTML = '';
       product.techSpecs.forEach(spec => {
@@ -1767,24 +1704,34 @@
         specElement.innerHTML = `<span class="text-gray-400">${currentLang === 'tr' ? spec.name : spec.nameEn}</span><span class="text-white">${spec.value}</span>`;
         techSpecsContainer.appendChild(specElement);
       });
-      
-      // Update modal buttons
       document.querySelectorAll('#product-modal [data-tr]').forEach(el => {
         el.textContent = el.getAttribute(currentLang === 'tr' ? 'data-tr' : 'data-en');
       });
       
-      // Show modal
+      // === YENİ EKLENEN KISIM ===
+      // Pop-up açıldığında ilk görseli otomatik seç
+      if (thumbnails.length > 0) {
+        mainImage.src = thumbnails[0].src; // Ana görseli ayarla
+        mainImage.alt = thumbnails[0].alt; // Ana görselin alt metnini ayarla
+        
+        // Önce hepsinden 'selected' sınıfını kaldır
+        thumbnails.forEach(thumb => thumb.classList.remove('selected'));
+        // Sonra sadece ilkine 'selected' sınıfını ekle
+        thumbnails[0].classList.add('selected');
+      }
+      
+      // Modalı göster
       productModal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
     }
     
-    // Modal closing function
+    // Modal kapatma fonksiyonu
     function closeProductModal() {
       productModal.classList.add('hidden');
       document.body.style.overflow = '';
     }
     
-    // Add click events
+    // Tıklama olayları
     productButtons.forEach(button => {
       button.addEventListener('click', function() {
         const productId = this.getAttribute('data-product');
@@ -1793,45 +1740,31 @@
     });
     
     closeModalButton.addEventListener('click', closeProductModal);
+    productModal.addEventListener('click', function(e) { if (e.target === productModal) closeProductModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && !product-modal.classList.contains('hidden')) closeProductModal(); });
     
-    // Close modal by clicking outside
-    productModal.addEventListener('click', function(e) {
-      if (e.target === productModal) {
-        closeProductModal();
-      }
-    });
-    
-    // Close modal with ESC key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && !productModal.classList.contains('hidden')) {
-        closeProductModal();
-      }
-    });
-    
-    // Product image click (change main image)
-    const thumbnails = document.querySelectorAll('#product-modal .grid-cols-3 img');
-    const mainImage = document.getElementById('modal-main-image');
-    
+    // === GÜNCELLENEN KISIM ===
+    // Küçük görsellere tıklama olayı
     thumbnails.forEach(thumbnail => {
       thumbnail.addEventListener('click', function() {
+        // Ana görseli güncelle
         mainImage.src = this.src;
         mainImage.alt = this.alt;
+        
+        // Bütün görsellerden 'selected' sınıfını kaldır
+        thumbnails.forEach(thumb => thumb.classList.remove('selected'));
+        // Sadece tıklanana 'selected' sınıfını ekle
+        this.classList.add('selected');
       });
     });
 
-    // Footer product links
+    // Footer ürün linkleri
     document.querySelectorAll('.product-footer-link').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const productId = this.getAttribute('data-product');
-            const productsSection = document.getElementById('products');
-            if (productsSection) {
-                productsSection.scrollIntoView({ behavior: 'smooth' });
-                // Open modal after scrolling
-                setTimeout(() => {
-                    openProductModal(productId);
-                }, 700); // Adjust delay as needed for smooth scroll to finish
-            }
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => { openProductModal(productId); }, 700);
         });
     });
   });
